@@ -1,2 +1,2 @@
-# Exercicios
+# Exercícios
  Desenvolvendo habilidades.
