@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    background:  hsl(217, 54%, 11%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.total{
+    height: 550px;
+    width: 300px;
+    background: hsl(216, 50%, 16%);
+    padding: 25px 25px 10px 25px;
+    border-radius: 15px;
+    box-shadow: 1px 30px 60px hsl(216, 53%, 7%);
+}
+
+.div-imagem{
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.imagem-principal{
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.parteEscrita-total{
+    height: 250px;
+    width: 300px;
+}
+
+.parteEscrita-total h3{
+    margin-top: 18px;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.paragrafo-principal{
+    margin-top: 15px;
+    font-size: 18px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.div-eth-clock{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.etrereum{
+    margin-left: 7px;
+    color: hsl(178, 100%, 50%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.clock {
+    margin-left: 7px;
+    color: hsl(215, 51%, 70%);
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.div-eth-clock p{
+    display: flex;
+    align-items: center;
+}
+
+.linha{
+    margin-top: 25px;
+    border: solid  hsl(215, 32%, 27%);
+    border-width: 0.1px;
+    width: 300px;
+}
+
+footer p {
+    display: flex;
+}
+
+footer p img{
+    width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+footer p span{
+    margin-top: 26px;
+    margin-left: 15px;
+    color: hsl(215, 51%, 70%);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+footer p a{
+    margin-top: 26px;
+    margin-left: 5px;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.div-imagem:hover img.olhozinho,
+.div-imagem:hover .overlay{
+    display: block;
+    cursor: pointer;
+}
+
+.olhozinho{
+    display: none;
+    position: absolute;
+    width: 50px;
+}
+
+.overlay{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:  hsla(178, 100%, 50%, 0.459);
+    border-radius: 10px;
+}
+
+.parteEscrita-total h3:hover{
+    color:  hsl(178, 100%, 50%);
+    cursor: pointer;
+}
+
+footer p a:hover{
+    color:  hsl(178, 100%, 50%);
+    cursor: pointer;
+}
