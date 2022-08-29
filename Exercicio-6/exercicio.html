@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Make remote work</title>
+    <link rel="stylesheet" href="exercicio.css">
+</head>
+<body>
+    <nav>
+        <div class="nave-total">
+            <div class="nave-esquerda">
+                <div><img class="imagem_logo" src="logo.svg" alt="Imagem logo"></div>
+                <div id="dropDown-features" class="dropDown-features" onclick="abreFechaDropDownFeatures()"> <a href="#"> <p class="texto-black-1" id="texto-black-1">Features <img id="imgFlechaUp-1" src="icon-arrow-down.svg" alt=""></p></a>
+                    <div class="dropDownLista-1" id="dropDownLista-1">
+                        <ul>
+                            <li><img src="icon-todo.svg" alt=""><a href="#">Todo List</a></li>
+                            <li><img src="icon-calendar.svg" alt=""><a href="#">Calendar</a></li>
+                            <li><img src="icon-reminders.svg" alt=""><a href="#">Reminders</a></li>
+                            <li><img src="icon-planning.svg" alt=""><a href="#">Planning</a></li>
+                        </ul>
+                    </div>
+                </div>            
+                <div id="dropDown-company" class="dropDown-company" onclick="abreFechaDropDownComp()"><a href="#"><p class="texto-black-2" id="texto-black-2">Company<img id="imgFlechaUp-2" class="imgFlechaUp" src="icon-arrow-down.svg" alt=""></p></a>
+                    <div class="dropDownLista-2" id="dropDownLista-2">
+                        <ul>
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                </div> 
+                <div><a href="#" onmouseover="clickCareers()" ><p id="opcaoCareers">Careers</p></a></div>
+                <div><a href="#" onmouseover="clickAbout()"><p id="opcaoAbout">About</p></a></div>
+            </div>
+            <div class="nave-direita">
+                <div><a href="#" onmouseover="clickLogin()"><p class="login" id="opcaoLogin">Login</p></a></div>
+                <div><input id="botaoSuperior" onmouseover="clickBotaoSuperior()" class="botão-superior-direito" type="button" value="Register"></div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="seção-lado-esquedo">
+            <h1 class="título">Make <br> remote work</h1>
+            <p class="parágrafo">Get your team in sync, no matter your location. <br>Streamline processes, create team rituals, and <br> watch productivity soar. </p>
+
+            <div class="botão-div">
+                <input id="botao-meio-fundo-preto" class="botão-meio" type="button" value="Learn more" onmouseover="clickBotaoMeio()">
+            </div>
+            <footer class="footer-imagens">
+                <div><img src="client-databiz.svg" alt="imagem-cliente-databiz"></div>
+                <div><img src="client-audiophile.svg" alt="imagem-cliente-autophile"></div>
+                <div><img src="client-meet.svg" alt="imagem-cliente-meet"></div>
+                <div><img src="client-maker.svg" alt="imagem-cliente-maker"></div>
+            <footer>
+        </section>
+        <section class="seção-lado-direito">
+            <div>
+                <img class="imagem-1" src="image-hero-desktop.png" alt="imagem(pessoa com notebook)">
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>  
+</body>
+</html>
