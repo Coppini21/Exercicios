@@ -1,0 +1,958 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(14, 13, 13);
+    display: flex;
+    flex-direction: column;
+
+}
+
+.secaoSuperior-header{
+    height: 880px;
+    width: 100%;
+    position: absolute;
+}
+
+.slider{
+    margin: 0 auto;
+    width: 100%;
+    height: 880px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imgSecaoSuperior{
+    height: 880px;
+}
+
+.inputRadio{
+    width: 100%;
+    height: 700px;
+    display: flex;
+}
+
+.inputRadio input{
+    display: none;
+}
+
+.divImg1{
+    display: none;
+}
+
+.divImg2{
+    display: none;
+}
+
+.divImg3{
+    display: none;
+}
+
+.divImg4{
+    display: none;
+}
+
+.slide{
+    width: 100%;
+    position: relative;
+}
+
+.divResumoFilmeSinopse{
+    position: absolute;
+    top: 200px;
+    width: 500px;
+    height: 120px;
+    left: 30px;
+    z-index: 5;
+}
+
+.tituloFilme{
+    color: white;
+    font-size: 30px;
+}
+
+.resumoFilme{
+    color: white;
+    font-size: 20px;
+}
+
+.sinopse{
+    display: none;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.slide img{
+    width: 100%;
+    height: 880px;
+    object-fit: cover;
+}
+
+.manual-navigation{
+    position: absolute;
+    width: 100%;
+    margin-top: -60px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+
+.manual-btn:hover{
+    background-color: white;
+}
+
+#radio1:checked ~ .divImg1{
+    display: block;
+}
+
+#radio2:checked ~ .divImg2{
+    display: block;
+}
+
+#radio3:checked ~ .divImg3{
+    display: block;
+}
+
+#radio4:checked ~ .divImg4{
+    display: block;
+}
+
+.navigation-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.navigation-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 640px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div:not(:last-child){
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+    background-color: white;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+    background-color: white;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+    background-color: white;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+    background-color: white;
+}
+
+nav{
+    position: absolute;
+    top: 20px;
+    display: flex;
+    gap: 20px;
+    z-index: 5;
+}
+
+nav p{
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.divLinks{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.tituloCategoriaPreviews{
+    color: aliceblue;
+    padding-left: 30px;
+    position: relative;
+    margin-top: 625px;
+    z-index: 5;
+    font-size: 30px; 
+}
+
+.tituloCategoria{
+    color: aliceblue;
+    padding-left: 30px;
+    font-size: 30px;
+    position: relative;
+    z-index: -1;
+}
+
+.secaoFilmesPreviews,
+.secaoFilmesLançamentos,
+.secaoFilmesPopulares,
+.secaoFilmesTerror,
+.secaoFilmesComedia,
+.secaoFilmesAcao,
+.secaoFilmesAventura,
+.secaoFilmesDrama,
+.secaoFilmesRomance,
+.secaoSeries,
+.secaoFilmesFantasia,
+.secaoFilmesSuspense{
+    height: 280px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.englobandoItem{
+    position: relative;
+    height: 270px;
+   
+}
+
+.categoria{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    gap: 10px;
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+.categoria::-webkit-scrollbar {
+    display: none;
+}
+
+.totalItem{
+    display: flex;
+    flex-direction: column;
+    height: 350px;
+    margin-top: 20px;
+    position: relative;
+    transition: all ease 0.7s;
+}
+
+.divFilme{
+    width: 270px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.divFilme > img{
+    width: 270px;
+    height: 180px;
+    border-radius: 5px;
+    object-fit: cover;
+    cursor: pointer; 
+}
+
+
+.divFilme-2X{
+    position: absolute;
+    width: 370px;
+    height: 330px;
+    transition: 0.5s;
+    background-color: rgb(14, 13, 13);
+    box-shadow: rgb(151, 153, 155) 0px 20px 30px -10px;
+    border-radius: 10px;
+    z-index: 10;
+    margin-top: -20px;
+}
+
+.divFilme-2X > img{
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: rgb(14, 13, 13);
+}
+
+
+.divMylistPlayInf{
+    display: none;
+    height: 50px;
+    width: 270px;
+    position: relative;
+    margin-top: 20px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.divFilme-2X:hover  .divMylistPlayInf{
+    width: 100%;
+}
+
+
+.play{
+    position: absolute;
+    z-index: 10;
+}
+
+
+.arrow-left,
+.arrow-right,
+.arrow-leftFilmeLancamento,
+.arrow-rightFilmeLancamento,
+.arrow-leftFilmePopulares,
+.arrow-rightFilmePopulares,
+.arrow-leftFilmeTerror,
+.arrow-rightFilmeTerror,
+.arrow-leftFilmeComedia,
+.arrow-rightFilmeComedia,
+.arrow-leftFilmeAcao,
+.arrow-rightFilmeAcao,
+.arrow-leftFilmeAventura,
+.arrow-rightFilmeAventura,
+.arrow-leftFilmeDrama,
+.arrow-rightFilmeDrama,
+.arrow-leftFilmeRomance,
+.arrow-rightFilmeRomance,
+.arrow-leftSeries,
+.arrow-rightSeries,
+.arrow-leftFilmesFantasia,
+.arrow-rightFilmesFantasia,
+.arrow-leftFilmesSuspense,
+.arrow-rightFilmesSuspense{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 90%;
+    width: 50px;
+    color: white;
+    z-index: 8;
+    /* background-color: rgba(105, 101, 99, 0.692); */
+    background: linear-gradient(to left, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    font-size: 30px;
+    opacity: 0.6;
+    transition: all 600ms ease-in-out;
+    cursor: pointer;
+}
+
+.arrow-left{
+    left: 0; 
+}
+
+.arrow-right{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-left:hover{
+    opacity: 1;
+}
+
+.arrow-right:hover{
+    opacity: 1;
+}
+
+/*arrow - seção lançamento - inicio*/
+.arrow-leftFilmeLancamento{
+    left: 0; 
+}
+
+.arrow-rightFilmeLancamento{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeLancamento:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeLancamento:hover{
+    opacity: 1;
+}
+/*arrow - seção lançamento - fim*/
+
+/*arrow - seção Populares - inicio*/
+.arrow-leftFilmePopulares{
+    left: 0; 
+}
+
+.arrow-rightFilmePopulares{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmePopulares:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmePopulares:hover{
+    opacity: 1;
+}
+/*arrow - seção Populares - fim*/
+
+/*arrow - seção Terror - inicio*/
+.arrow-leftFilmeTerror{
+    left: 0; 
+}
+
+.arrow-rightFilmeTerror{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeTerror:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeTerror:hover{
+    opacity: 1;
+}
+/*arrow - seção Terror - fim*/
+
+/*arrow - seção Comédia - inicio*/
+.arrow-leftFilmeComedia{
+    left: 0; 
+}
+
+.arrow-rightFilmeComedia{
+    background: linear-gradient(to right, transparent 0%,  rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeComedia:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeComedia:hover{
+    opacity: 1;
+}
+/*arrow - seção Comédia - fim*/
+
+/*arrow - seção Ação - inicio*/
+.arrow-leftFilmeAcao{
+    left: 0; 
+}
+
+.arrow-rightFilmeAcao{
+    background: linear-gradient(to right, transparent 0%,  rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeAcao:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeAcao:hover{
+    opacity: 1;
+}
+/*arrow - seção Ação - fim*/
+
+/*arrow - seção Aventura - inicio*/
+.arrow-leftFilmeAventura{
+    left: 0; 
+}
+
+.arrow-rightFilmeAventura{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeAventura:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeAventura:hover{
+    opacity: 1;
+}
+/*arrow - seção Aventura - fim*/
+
+/*arrow - seção Drama - inicio*/
+.arrow-leftFilmeDrama{
+    left: 0; 
+}
+
+.arrow-rightFilmeDrama{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeDrama:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeDrama:hover{
+    opacity: 1;
+}
+/*arrow - seção Drama - fim*/
+
+/*arrow - seção Romance - inicio*/
+.arrow-leftFilmeRomance{
+    left: 0; 
+}
+
+.arrow-rightFilmeRomance{
+    background: linear-gradient(to right, transparent 0%,  rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmeRomance:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmeRomance:hover{
+    opacity: 1;
+}
+/*arrow - seção Romance - fim*/
+
+/*arrow - seção Fantasia - inicio*/
+.arrow-leftFilmesFantasia{
+    left: 0; 
+}
+
+.arrow-rightFilmesFantasia{
+    background: linear-gradient(to right, transparent 0%,  rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmesFantasia:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmesFantasia:hover{
+    opacity: 1;
+}
+/*arrow - seção Fantasia - fim*/
+
+/*arrow - seção Fantasia - inicio*/
+.arrow-leftFilmesSuspense{
+    left: 0; 
+}
+
+.arrow-rightFilmesSuspense{
+    background: linear-gradient(to right, transparent 0%,  rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftFilmesSuspense:hover{
+    opacity: 1;
+}
+
+.arrow-rightFilmesSuspense:hover{
+    opacity: 1;
+}
+/*arrow - seção Fantasia - fim*/
+
+/*arrow - seção Séries - inicio*/
+.arrow-leftSeries{
+    left: 0; 
+}
+
+.arrow-rightSeries{
+    background: linear-gradient(to right, transparent 0%, rgba(204, 199, 196, 0.692) 100%);
+    right: 0;
+}
+
+.arrow-leftSeries:hover{
+    opacity: 1;
+}
+
+.arrow-rightSeries:hover{
+    opacity: 1;
+}
+/*arrow - seção Séries - fim*/
+
+
+@media(max-width: 900px){
+    .manual-navigation{
+        margin-top: -110px;
+    }
+    
+    .navigation-auto{
+        margin-top: 590px;
+    }     
+}
+
+@media(max-width: 768px){
+    body{
+        overflow: auto;
+    }
+
+    .secaoSuperior-header{
+        height: 500px;
+    }
+
+    .secaoSuperior-header{
+        height: 500px;  
+    }
+    
+    .slider{
+        height: 500px; 
+    }
+
+    .imgSecaoSuperior{
+        height: 500px;
+    }
+
+    .inputRadio{
+        height: 500px;  
+    }
+
+    .manual-navigation{
+        margin-top: -60px;
+    }
+
+    .divResumoFilmeSinopse{
+        position: absolute;
+        top: 120px;
+        width: 400px;
+        left: 15px;
+        z-index: 5;
+    }
+
+    .tituloFilme{
+        font-size: 25px;  
+    }
+    
+    .resumoFilme{
+        font-size: 18px;  
+    }
+    
+    .sinopse{
+        font-size: 18px;
+    }
+    
+    .slide img{
+        height: 500px; 
+    }
+
+    .manual-btn{
+        border: 2px solid white;
+        padding: 4px;
+    }
+    
+    .manual-btn:not(:last-child){
+        margin-right: 30px;
+    }
+
+    .navigation-auto div{
+        border: 2px solid blue;
+        padding: 4px;
+    }
+    
+    .navigation-auto{
+        margin-top: 440px;
+    }
+    
+    .navigation-auto div:not(:last-child){
+        margin-right: 30px;
+    }
+
+    nav{
+        top: 15px;
+        gap: 15px;
+    }
+    
+    nav p{
+        font-size: 18px;
+    }
+    
+    .divLinks{
+        gap: 18px;
+    }
+
+    .tituloCategoriaPreviews{
+        margin-top: 520px;
+        font-size: 25px;
+        padding-left: 15px; 
+    }
+    
+    .tituloCategoria{
+        font-size: 20px;
+        padding-left: 15px; 
+        z-index: 0;
+    }
+
+    .secaoFilmesPreviews,
+    .secaoFilmesLançamentos,
+    .secaoFilmesPopulares,
+    .secaoFilmesTerror,
+    .secaoFilmesComedia,
+    .secaoFilmesAcao,
+    .secaoFilmesAventura,
+    .secaoFilmesDrama,
+    .secaoFilmesRomance,
+    .secaoSeries,
+    .secaoFilmesFantasia,
+    .secaoFilmesSuspense{
+        height: 240px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .englobandoItem{
+        height: 240px;
+       
+    }
+    
+    .categoria{
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .totalItem{
+        height: 280px;
+    }
+
+    .divFilme{
+        width: 150px;
+        height: 150px;
+        cursor: pointer;
+    }
+    
+    .divFilme > img{
+        width: 150px;
+        height: 180px;
+        border-radius: 0px; 
+    }
+    
+    .divFilme-2X{
+        position: absolute;
+        width: 310px;
+        height: 265px;
+        border-radius: 5px;
+        margin-top: -20px;
+    }
+    
+    .divFilme-2X > img{
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: 170px;
+    }
+
+    .divMylistPlayInf{
+        height: 40px;
+        width: 100px;
+        margin-top: 25px;
+    }
+
+    .divMylistPlayInf img{
+        height: 40px;
+    
+    }
+
+    .play{
+        width: 70px;
+    }
+      
+}
+
+@media(max-width: 425px){
+    body{
+        min-width: 320px;
+        overflow: auto;
+    }
+
+    .secaoSuperior-header{
+        min-width: 320px;
+        height: 300px;
+    }
+
+    .secaoSuperior-header{
+        min-width: 320px;
+        height: 300px;  
+    }
+    
+    .slider{
+        min-width: 320px;
+        height: 300px; 
+    }
+
+    .imgSecaoSuperior{
+        min-width: 320px;
+        height: 300px;
+    }
+
+    .inputRadio{
+        height: 180px;  
+    }
+
+    .divResumoFilmeSinopse{
+        position: absolute;
+        top: 80px;
+        width: 260px;
+        left: 15px;
+        z-index: 5;
+    }
+
+    .tituloFilme{
+        font-size: 20px;  
+    }
+    
+    .resumoFilme{
+        font-size: 16px;  
+    }
+    
+    .sinopse{
+        font-size: 16px;
+    }
+    
+    .slide img{
+        height: 300px; 
+    }
+
+    .manual-navigation{
+        margin-top: 98px;
+    }
+    
+    .manual-btn{
+        border: 1px solid white;
+        padding: 3px;
+    }
+    
+    .manual-btn:not(:last-child){
+        margin-right: 15px;
+    }
+
+    .navigation-auto div{
+        border: 1px solid blue;
+        padding: 3px;
+    }
+    
+    .navigation-auto{
+        margin-top: 278px;
+    }
+    
+    .navigation-auto div:not(:last-child){
+        margin-right: 15px;
+    }
+
+    nav{
+        top: 10px;
+        gap: 10px;
+    }
+    
+    nav p{
+        font-size: 16px;
+    }
+    
+    .divLinks{
+        gap: 15px;
+    }
+
+    .tituloCategoriaPreviews{
+        margin-top: 320px;
+        font-size: 20px;
+        padding-left: 15px; 
+    }
+    
+    .tituloCategoria{
+        font-size: 20px;
+        padding-left: 15px; 
+        z-index: 0;
+    }
+
+    .secaoFilmesPreviews,
+    .secaoFilmesLançamentos,
+    .secaoFilmesPopulares,
+    .secaoFilmesTerror,
+    .secaoFilmesComedia,
+    .secaoFilmesAcao,
+    .secaoFilmesAventura,
+    .secaoFilmesDrama,
+    .secaoFilmesRomance,
+    .secaoSeries,
+    .secaoFilmesFantasia,
+    .secaoFilmesSuspense{
+        height: 200px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .englobandoItem{
+        height: 200px;
+       
+    }
+    
+    .categoria{
+        gap: 10px;
+        width: 100%;
+    }
+    
+    .totalItem{
+        height: 200px;
+    }
+
+    .divFilme{
+        width: 100px;
+        height: 150px;
+        cursor: pointer;
+    }
+    
+    .divFilme > img{
+        width: 100px;
+        height: 150px;
+        border-radius: 0px; 
+    }
+    
+    
+    .divFilme-2X{
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        border-radius: 5px;
+        margin-top: -20px;
+    }
+    
+    .divFilme-2X > img{
+        border-radius: 5px 5px 0 0;
+        width: 100%;
+        height: 120px;
+    }
+
+    .divMylistPlayInf{
+        height: 30px;
+        width: 100px;
+        margin-top: 20px;
+    }
+
+    .divMylistPlayInf img{
+        height: 30px;
+    
+    }
+
+    .play{
+        width: 50px;
+    }
+      
+}
+
