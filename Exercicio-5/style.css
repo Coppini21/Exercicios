@@ -1,0 +1,724 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+.totalPagina {
+    height: 100vh;
+    width: 100%;
+}
+
+.planoDeFundoLadoDireito {
+    float: right;
+    height: 100vh;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.planoDeFundoLadoEsquerdo {
+    height: 100vh;
+    width: 25%;
+    float: left;
+    display: flex;
+    background-image: url("images/bg-main-desktop.png");
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#imgcartao1 {
+    width: 470px;
+    height: 250px;
+    position: absolute;
+    margin-top: -260px;
+    margin-left: -100px;
+    z-index: 0;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+}
+
+#logo1 {
+    width: 100px;
+    position: absolute;
+    z-index: 2;
+    margin-top: -235px;
+    margin-left: -50px;
+}
+
+.numeroCartao {
+    width: 430px;
+    position: absolute;
+    z-index: 2;
+    margin-top: -120px;
+    margin-left: -48px;
+    font-size: 30px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    letter-spacing: 1.3px;
+    font-weight: 400;
+}
+
+.nomeCartao {
+    width: 400px;
+    position: absolute;
+    z-index: 2;
+    margin-top: -60px;
+    margin-left: -48px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    letter-spacing: 1.3px;
+
+}
+
+.dataCartaoMes {
+    width: 200px;
+    position: absolute;
+    z-index: 2;
+    margin-top: -60px;
+    margin-left: 270px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    letter-spacing: 1.3px;
+}
+
+.dataCartaoAno {
+    width: 200px;
+    position: absolute;
+    z-index: 2;
+    margin-top: -60px;
+    margin-left: 299px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    letter-spacing: 1.3px;
+}
+
+#imgcartao2 {
+    width: 470px;
+    height: 250px;
+    position: absolute;
+    margin-top: 10px;
+    z-index: 0;
+    box-shadow: 10px 10px 10px black;
+    border-radius: 10px;
+}
+
+.cvcCartaoBack {
+    width: 50px;
+    position: absolute;
+    z-index: 2;
+    margin-top: 123px;
+    margin-left: 380px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    letter-spacing: 1.3px;
+
+}
+
+#totalInfCartao {
+    padding-bottom: 20px;
+}
+
+
+#nome {
+    width: 420px;
+    height: 45px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+#nome::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.div-number {
+    padding-top: 15px;
+}
+
+#numero {
+    width: 420px;
+    height: 45px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+#numero::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.totalAnoMesCvc {
+    display: flex;
+    padding-top: 15px;
+    width: 420px;
+}
+
+#mes {
+    width: 100px;
+    height: 45px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+#mes::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+
+#ano {
+    width: 100px;
+    height: 45px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 10px;
+    font-weight: 500;
+}
+
+#ano::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+#cvc {
+    width: 206px;
+    height: 45px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+    padding-left: 10px;
+    font-weight: 500;
+    margin-left: 10px;
+
+}
+
+#cvc::placeholder {
+    color: hsl(270, 3%, 87%);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+}
+
+.cvcRotulo {
+    margin-left: 10px;
+}
+
+label {
+    width: 420px;
+    color: hsl(278, 68%, 11%);
+    letter-spacing: 1.3px;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+
+}
+
+.rotulo {
+    padding-bottom: 5px;
+    font-size: 14px;
+}
+
+.div-btn {
+    padding-top: 20px;
+}
+
+#btn {
+    height: 52px;
+    width: 420px;
+    font-size: 16px;
+    background-color: hsl(278, 68%, 11%);
+    color: hsl(270, 3%, 87%);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: hsl(249, 99%, 64%);
+    color: white;
+    border: 2px solid hsl(249, 99%, 64%);
+}
+
+.total-depoisDaExecucao {
+    display: none;
+    padding: 10px;
+}
+
+.divImagemIcon {
+    width: 420px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.divImagemIcon img {
+    width: 120px;
+}
+
+.total-depoisDaExecucao h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1.3px;
+    color: hsl(278, 68%, 11%);
+    font-size: 20px;
+    margin-top: 18px;
+}
+
+.total-depoisDaExecucao p {
+    width: 420px;
+    text-align: center;
+    font-family: 'Space Grotesk', sans-serif;
+    color: hsl(279, 6%, 55%);
+    font-size: 16px;
+    margin-top: 8px;
+
+}
+
+@media(max-width: 1510px) {
+    .totalPagina {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
+
+
+    .infoName {
+        margin-top: 20px;
+    }
+
+    .planoDeFundoLadoEsquerdo {
+        height: 250px;
+        float: none;
+        width: 100vw;
+        background-image: url("images/bg-main-mobile.png");
+        padding-top: 100px;
+
+    }
+
+    .planoDeFundoLadoDireito {
+        float: none;
+        height: 350px;
+        width: 100vw;
+    }
+
+    #totalInfCartao {
+        margin-top: 500px;
+    }
+
+    #imgcartao1 {
+        margin-top: 0px;
+        margin-left: -290px;
+        z-index: 1;
+    }
+
+    #logo1 {
+        z-index: 2;
+        margin-top: 25px;
+        margin-left: -260px;
+    }
+
+    .numeroCartao {
+        z-index: 2;
+        margin-top: 130px;
+        margin-left: -260px;
+    }
+
+    .nomeCartao {
+        z-index: 2;
+        margin-top: 190px;
+        margin-left: -260px;
+    }
+
+    .dataCartaoMes {
+        z-index: 2;
+        width: 60px;
+        margin-top: 190px;
+        margin-left: 60px;
+    }
+
+    .dataCartaoAno {
+        z-index: 2;
+        width: 60px;
+        margin-top: 190px;
+        margin-left: 88px;
+    }
+
+    #imgcartao2 {
+        margin-top: -142px;
+        margin-left: -188px;
+        z-index: 0;
+    }
+
+    .cvcCartaoBack {
+        width: 60px;
+        margin-top: -29px;
+        margin-left: 197px;
+    }
+
+    .total-depoisDaExecucao {
+        margin-top: 500px;
+    }
+
+
+}
+
+
+
+
+@media(max-width: 768px) {
+    totalPagina {
+        min-height: 100vh;
+        min-width: 100vw;
+
+    }
+
+    .planoDeFundoLadoEsquerdo {
+        height: 250px;
+        float: none;
+        width: 100vw;
+        background-image: url("images/bg-main-mobile.png");
+        padding-top: 100px;
+
+    }
+
+    .planoDeFundoLadoDireito {
+        float: none;
+        height: 350px;
+        width: 100vw;
+    }
+
+    #totalInfCartao {
+        margin-top: 400px;
+    }
+
+    .total-depoisDaExecucao {
+        margin-top: 400px;
+    }
+
+    #imgcartao1 {
+        width: 370px;
+        height: 200px;
+        margin-top: 0px;
+        margin-left: -225px;
+        z-index: 1;
+    }
+
+    #logo1 {
+        width: 70px;
+        z-index: 2;
+        margin-top: 25px;
+        margin-left: -210px;
+    }
+
+    .numeroCartao {
+        width: 370px;
+        font-size: 25px;
+        z-index: 2;
+        margin-top: 110px;
+        margin-left: -210px;
+    }
+
+    .nomeCartao {
+        font-size: 14px;
+        z-index: 2;
+        margin-top: 160px;
+        margin-left: -210px;
+    }
+
+    .dataCartaoMes {
+        font-size: 14px;
+        z-index: 2;
+        margin-top: 160px;
+        margin-left: 60px;
+    }
+
+    .dataCartaoAno {
+        font-size: 14px;
+        z-index: 2;
+        margin-top: 160px;
+        margin-left: 88px;
+    }
+
+    #imgcartao2 {
+        width: 370px;
+        height: 200px;
+        margin-top: -112px;
+        margin-left: -138px;
+        z-index: 0;
+    }
+
+    .cvcCartaoBack {
+        width: 60px;
+        margin-top: -24px;
+        margin-left: 157px;
+    }
+
+    #nome {
+        width: 350px;
+
+    }
+
+    #numero {
+        width: 350px;
+
+    }
+
+    .totalAnoMesCvc {
+        width: 350px;
+    }
+
+    #mes {
+        width: 80px;
+
+    }
+
+    #ano {
+        width: 80px;
+
+    }
+
+    #cvc {
+        width: 176px;
+
+    }
+
+    #btn {
+        width: 350px;
+    }
+
+    label {
+        width: 350px;
+    }
+
+    .rotulo {
+        width: 150px;
+    }
+
+    .divImagemIcon {
+        width: 350px;
+    }
+
+    .divImagemIcon img {
+        width: 80px;
+    }
+
+    .total-depoisDaExecucao h3 {
+        font-size: 25px;
+    }
+
+    .total-depoisDaExecucao p {
+        width: 320px;
+        font-size: 16px;
+    }
+
+}
+
+
+@media(max-width: 500px) {
+    .totalPagina {
+        min-height: 100vh;
+        min-width: 100%;
+        min-width: 375px;
+    }
+
+
+    .infoName {
+        margin-top: 10px;
+
+    }
+
+    .planoDeFundoLadoEsquerdo {
+        height: 150px;
+        width: 100%;
+        float: none;
+        background-image: url("images/bg-main-mobile.png");
+        padding: 0 5px;
+
+    }
+
+    .planoDeFundoLadoDireito {
+        float: none;
+        height: 310px;
+        width: 100%;
+
+    }
+
+    #totalInfCartao {
+        margin-top: 200px;
+    }
+
+    .total-depoisDaExecucao {
+        margin-top: 200px;
+    }
+
+    #imgcartao1 {
+        width: 230px;
+        height: 110px;
+        margin-top: 2px;
+        margin-left: -130px;
+        z-index: 1;
+        border-radius: 5px;
+    }
+
+    #logo1 {
+        width: 30px;
+        z-index: 2;
+        margin-top: 17px;
+        margin-left: -110px;
+    }
+
+    .numeroCartao {
+        width: 230px;
+        z-index: 2;
+        margin-top: 57px;
+        margin-left: -108px;
+        font-size: 14px;
+
+    }
+
+    .nomeCartao {
+        width: 200px;
+        z-index: 2;
+        margin-top: 82px;
+        margin-left: -108px;
+        font-size: 10px;
+        font-weight: 100;
+
+    }
+
+    .dataCartaoMes {
+        width: 100px;
+        z-index: 2;
+        margin-top: 82px;
+        margin-left: 40px;
+        font-size: 10px;
+    }
+
+    .dataCartaoAno {
+        width: 100px;
+        z-index: 2;
+        margin-top: 82px;
+        margin-left: 58px;
+        font-size: 10px;
+    }
+
+    #imgcartao2 {
+        width: 230px;
+        height: 110px;
+        margin-top: -59px;
+        margin-left: -85px;
+        z-index: 0;
+        border-radius: 5px;
+    }
+
+    .cvcCartaoBack {
+        width: 60px;
+        z-index: 2;
+        margin-top: -12px;
+        margin-left: 95px;
+        font-size: 10px;
+    }
+
+    #nome {
+        font-size: 12px;
+        width: 300px;
+
+    }
+
+    #numero {
+        font-size: 12px;
+        width: 300px;
+
+    }
+
+    .totalAnoMesCvc {
+        font-size: 12px;
+        width: 300px;
+    }
+
+    #mes {
+        font-size: 12px;
+        width: 65px;
+
+    }
+
+    #ano {
+        font-size: 12px;
+        width: 65px;
+
+    }
+
+    #cvc {
+        font-size: 12px;
+        width: 150px;
+
+    }
+
+    #btn {
+        height: 38px;   
+        width: 300px;
+        font-size: 12px;
+    }
+
+    label {
+        width: 300px;
+    }
+
+    .rotulo {
+        font-size: 12px;
+        width: 140px;
+    }
+
+    .divImagemIcon {
+        width: 300px;
+    }
+
+    .divImagemIcon img {
+        width: 50px;
+    }
+
+    .total-depoisDaExecucao h3 {
+        font-size: 20px;
+    }
+
+    .total-depoisDaExecucao p {
+        width: 300px;
+        font-size: 12px;
+    }
+
+}
+  
