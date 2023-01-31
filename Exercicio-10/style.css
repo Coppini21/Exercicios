@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 570px;
+    background-color: rgb(210, 169, 248);
+}
+
+.titulo{
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Rowdies', cursive;
+}
+
+.divTotalJogadores{
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+    margin-top: 25px;
+}
+
+.divButtonIniciar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnIniciar{
+    margin-top: 10px;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+    font-family: 'Rowdies', cursive;
+}
+
+#btnIniciar:hover{
+    background-color: rgb(223, 65, 65);
+}
+
+#totalItens{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.item{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    background: rgb(247, 238, 238);
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: rgb(247, 238, 238);
+    font-family: 'Rowdies', cursive;
+
+}
+
+.secaoParteDeBaixo{
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.divTotalJogador{
+    margin-top: 20px;
+}
+
+.divTotalVencedor{
+    margin-top: 5px;
+}
+
+label{
+    font-size: 20px;
+    font-family: 'Old Standard TT', serif;
+    font-weight: 600;
+}
+
+#nomeJogadorX{
+    font-weight: 400;
+}
+
+#nomeJogadorO{
+    font-weight: 400;
+}
+
+#jogadorAtual{
+    font-weight: 400;
+}
+
+#vencedor{
+    font-weight: 400;
+}
+
+#buttonRestart{
+    margin-top: 10px;
+    padding: 10px 40px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: brown;
+    color: white;
+    font-family: 'Rowdies', cursive;
+}
+
+#buttonRestart:hover{
+    background-color: rgb(223, 65, 65);
+}

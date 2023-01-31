@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">JOGO DA VELHA</h1>
+        <div class="divTotalJogadores">
+            <div class="divJogadorX">
+                <label>JOGADOR X:</label><br>
+                <label id="nomeJogadorX"></label>
+            </div>
+            <div class="divJogadorO">
+                <label>JOGADOR O:</label><br>
+                <label id="nomeJogadorO"></label>
+            </div>
+        </div>
+        <div class="divButtonIniciar">
+            <button type="button" id="btnIniciar" onclick="sorteio()">Iniciar Sorteio</button>
+        </div>
+    </header>
+
+    <section id="totalItens">
+        <div class="item" id="1" data-select="false">-</div>
+        <div class="item" id="2" data-select="false">-</div>
+        <div class="item" id="3" data-select="false">-</div>
+        <div class="item" id="4" data-select="false">-</div>
+        <div class="item" id="5" data-select="false">-</div>
+        <div class="item" id="6" data-select="false">-</div>
+        <div class="item" id="7" data-select="false">-</div>
+        <div class="item" id="8" data-select="false">-</div>
+        <div class="item" id="9" data-select="false">-</div>
+    </section>
+    <section class="secaoParteDeBaixo">
+        <div class="divTotalJogador">
+            <label>Jogador:</label>
+            <label id="jogadorAtual"></label>
+        </div>
+        <div class="divTotalVencedor">
+            <label>Vencedor:</label>
+            <label id="vencedor"></label>
+        </div>
+        <button type="button" id="buttonRestart" onclick="resetar()">Restart</button>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
